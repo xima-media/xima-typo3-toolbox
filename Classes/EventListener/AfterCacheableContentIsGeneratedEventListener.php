@@ -17,7 +17,9 @@ class AfterCacheableContentIsGeneratedEventListener
     public function __invoke(AfterCacheableContentIsGeneratedEvent $event): void
     {
         if ($GLOBALS['TYPO3_CONF_VARS']['EXTCONF'][Configuration::EXT_KEY]['technicalContext']['disable'] ||
-            in_array(Environment::getContext()->__toString(), $GLOBALS['TYPO3_CONF_VARS']['EXTCONF'][Configuration::EXT_KEY]['technicalContext']['hideForContexts'])) {
+            in_array(Environment::getContext()->__toString(), $GLOBALS['TYPO3_CONF_VARS']['EXTCONF'][Configuration::EXT_KEY]['technicalContext']['hideForContexts']) ||
+            !str_contains('text/html', $event->getRequest()->getHeaderLine('content-type'))
+        ) {
             return;
         }
 
