@@ -14,7 +14,7 @@ class LastDeploymentEventListener
 
     public function __invoke(SystemInformationToolbarCollectorEvent $systemInformation): void
     {
-        if (isset($GLOBALS['TYPO3_CONF_VARS']['EXTCONF'][Configuration::EXT_KEY]['systemInformationToolbar']['disable'])) {
+        if ($GLOBALS['TYPO3_CONF_VARS']['EXTCONF'][Configuration::EXT_KEY]['systemInformationToolbar']['disable']) {
             return;
         }
         $path = GeneralUtility::getFileAbsFileName($GLOBALS['TYPO3_CONF_VARS']['EXTCONF'][Configuration::EXT_KEY]['systemInformationToolbar']['fileToCheck']);
@@ -35,7 +35,7 @@ class LastDeploymentEventListener
         $systemInformation->getToolbarItem()->addSystemInformation(
             $this->getLanguageService()->sL('LLL:EXT:' . Configuration::EXT_KEY . '/Resources/Private/Language/locallang.xlf:usages.toolbar-label'),
             $humanFormatDateTime,
-            'actions-rocket',
+            'actions-refresh',
         );
     }
 

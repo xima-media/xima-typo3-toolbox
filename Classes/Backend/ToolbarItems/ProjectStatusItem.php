@@ -48,7 +48,7 @@ class ProjectStatusItem implements ToolbarItemInterface
      */
     protected function getWebsiteVersion(): string
     {
-        return GeneralUtility::makeInstance(PackageManager::class)->getComposerManifest(Environment::getProjectPath() . '/', true)->version;
+        return GeneralUtility::makeInstance(PackageManager::class)->getComposerManifest(Environment::getProjectPath() . '/', true)->version ?? '';
     }
 
     /**
