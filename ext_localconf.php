@@ -9,6 +9,7 @@ $GLOBALS['TYPO3_CONF_VARS']['EXTCONF'][Configuration::EXT_KEY]['contextColors'] 
     'Production/Standby' => '#2f9c91',
     'Staging' => '#f39c12',
     'Testing' => '#f39c12',
+    'Testing/Stage' => '#f39c12',
     'Development' => '#bd593a',
     'Development/DDEV' => '#bd593a',
 ];
