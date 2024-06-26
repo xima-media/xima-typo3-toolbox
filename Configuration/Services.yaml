@@ -1,0 +1,22 @@
+services:
+    _defaults:
+        autowire: true
+        autoconfigure: true
+        public: false
+
+    Xima\XimaTypo3Toolbox\:
+        resource: '../Classes/*'
+        exclude: '../Classes/Domain/Model/*'
+
+
+    Xima\XimaTypo3Toolbox\EventListener\LastDeploymentEventListener:
+        tags:
+            -   name: event.listener
+                identifier: 'xima-typo3-toolbox/backend/last-deployment'
+                event: TYPO3\CMS\Backend\Backend\Event\SystemInformationToolbarCollectorEvent
+
+    Xima\XimaTypo3Toolbox\EventListener\AfterCacheableContentIsGeneratedEventListener:
+        tags:
+            -   name: event.listener
+                identifier: 'xima-typo3-toolbox/frontend/after-cacheable-content-is-generated'
+                event: TYPO3\CMS\Frontend\Event\AfterCacheableContentIsGeneratedEvent
