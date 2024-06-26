@@ -36,7 +36,6 @@ class AfterCacheableContentIsGeneratedEventListener
         $technicalContextNode->setAttribute('data-context', Environment::getContext()->__toString());
         $technicalContextNode->setAttribute('title', 'This is part of the feature branch deployment and shows the actual site name of the website. This hint will not be displayed in production context.');
 
-
         $technicalContextCloseNode = $dom->createElement('button');
         $technicalContextCloseNode->setAttribute('class', 'technical-context__close');
         $technicalContextCloseNode->setAttribute('type', 'button');

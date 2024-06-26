@@ -11,7 +11,6 @@ use Xima\XimaTypo3Toolbox\Configuration;
 
 class LastDeploymentEventListener
 {
-
     public function __invoke(SystemInformationToolbarCollectorEvent $systemInformation): void
     {
         if ($GLOBALS['TYPO3_CONF_VARS']['EXTCONF'][Configuration::EXT_KEY]['systemInformationToolbar']['disable']) {
