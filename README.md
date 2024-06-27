@@ -4,7 +4,7 @@
 
 # TYPO3 extension `xima_typo3_toolbox`
 
-[![Supported TYPO3 versions](https://badgen.net/badge/TYPO3/v12/orange)](https://extensions.typo3.org/extension/xima_typo3_manual)
+[![Supported TYPO3 versions](https://badgen.net/badge/TYPO3/v12/orange)]()
 
 </div>
 
