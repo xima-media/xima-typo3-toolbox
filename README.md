@@ -14,6 +14,7 @@ Features:
 - Backend toolbar item for project version and application context
 - Frontend hint for technical context information
 - Last updated information within system information toolbar
+- Application context endpoint
 
 # Installation
 

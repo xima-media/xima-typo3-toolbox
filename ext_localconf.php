@@ -2,6 +2,7 @@
 
 use Xima\XimaTypo3Toolbox\Backend\ToolbarItems\ProjectStatusItem;
 use Xima\XimaTypo3Toolbox\Configuration;
+use Xima\XimaTypo3Toolbox\Controller\ContextController;
 
 // Generell
 $GLOBALS['TYPO3_CONF_VARS']['EXTCONF'][Configuration::EXT_KEY]['contextColors'] = [
@@ -30,3 +31,7 @@ $GLOBALS['TYPO3_CONF_VARS']['EXTCONF'][Configuration::EXT_KEY]['systemInformatio
 
 // Toolbar Item
 $GLOBALS['TYPO3_CONF_VARS']['EXTCONF'][Configuration::EXT_KEY]['toolbarItem']['disable'] = false;
+
+// Application Context Endpoint
+$GLOBALS['TYPO3_CONF_VARS'][Configuration::EXT_KEY]['applicationContextEndpoint']['eID'] = 1719931549;
+$GLOBALS['TYPO3_CONF_VARS']['FE']['eID_include'][$GLOBALS['TYPO3_CONF_VARS'][Configuration::EXT_KEY]['applicationContextEndpoint']['eID']] = ContextController::class . '::getContextAction';
