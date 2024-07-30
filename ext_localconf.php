@@ -37,4 +37,4 @@ $GLOBALS['TYPO3_CONF_VARS'][Configuration::EXT_KEY]['applicationContextEndpoint'
 $GLOBALS['TYPO3_CONF_VARS']['FE']['eID_include'][$GLOBALS['TYPO3_CONF_VARS'][Configuration::EXT_KEY]['applicationContextEndpoint']['eID']] = ContextController::class . '::getContextAction';
 
 // Frontend Editing
-$GLOBALS['TYPO3_CONF_VARS']['EXTENSIONS'][Configuration::EXT_KEY]['frontendEditing']['enable'] = true;
+$GLOBALS['TYPO3_CONF_VARS']['EXTENSIONS'][Configuration::EXT_KEY]['frontendEditing']['enable'] = false;
