@@ -43,9 +43,13 @@ final class EditController
             ->select('*')
             ->from('tt_content')
             ->where(
-                $queryBuilder->expr()->eq('pid', $queryBuilder->createNamedParameter($id, \TYPO3\CMS\Core\Database\Connection::PARAM_INT))
+                $queryBuilder->expr()->eq('uid', $queryBuilder->createNamedParameter($id, \TYPO3\CMS\Core\Database\Connection::PARAM_INT))
             )
             ->executeQuery()->fetchAssociative();
+
+        if (!$contentElement) {
+            return new RedirectResponse($returnUrl);
+        }
 
         $pid = (int)$contentElement['pid'];
 
