@@ -28,7 +28,7 @@ class ProjectStatusItem implements ToolbarItemInterface
      */
     public function getItem(): string
     {
-        if ($GLOBALS['TYPO3_CONF_VARS']['EXTCONF'][Configuration::EXT_KEY]['toolbarItem']['disable']) {
+        if ($GLOBALS['TYPO3_CONF_VARS']['EXTENSIONS'][Configuration::EXT_KEY]['toolbarItem']['disable']) {
             return '';
         }
 
@@ -38,7 +38,7 @@ class ProjectStatusItem implements ToolbarItemInterface
         return $view->assignMultiple([
             'version' => $this->getWebsiteVersion(),
             'context' => Environment::getContext(),
-            'color' => $GLOBALS['TYPO3_CONF_VARS']['EXTCONF'][Configuration::EXT_KEY]['contextColors'][Environment::getContext()->__toString()] ?? 'transparent',
+            'color' => $GLOBALS['TYPO3_CONF_VARS']['EXTENSIONS'][Configuration::EXT_KEY]['contextColors'][Environment::getContext()->__toString()] ?? 'transparent',
         ])->render();
     }
 

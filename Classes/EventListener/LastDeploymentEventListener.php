@@ -13,10 +13,10 @@ class LastDeploymentEventListener
 {
     public function __invoke(SystemInformationToolbarCollectorEvent $systemInformation): void
     {
-        if ($GLOBALS['TYPO3_CONF_VARS']['EXTCONF'][Configuration::EXT_KEY]['systemInformationToolbar']['disable']) {
+        if ($GLOBALS['TYPO3_CONF_VARS']['EXTENSIONS'][Configuration::EXT_KEY]['systemInformationToolbar']['disable']) {
             return;
         }
-        $path = GeneralUtility::getFileAbsFileName($GLOBALS['TYPO3_CONF_VARS']['EXTCONF'][Configuration::EXT_KEY]['systemInformationToolbar']['fileToCheck']);
+        $path = GeneralUtility::getFileAbsFileName($GLOBALS['TYPO3_CONF_VARS']['EXTENSIONS'][Configuration::EXT_KEY]['systemInformationToolbar']['fileToCheck']);
         $lastModified = $this->getLastModifiedTime($path);
         if (class_exists(\IntlDateFormatter::class)) {
             $formatter = new \IntlDateFormatter(

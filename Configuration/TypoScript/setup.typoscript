@@ -1,0 +1,22 @@
+[enableTechnicalContext()]
+  lib.applicationContextTitle = USER
+  lib.applicationContextTitle {
+    userFunc = Xima\XimaTypo3Toolbox\Utility\ApplicationContextUtility->getContextTitle
+  }
+
+  lib.applicationContextColor = USER
+  lib.applicationContextColor {
+    userFunc = Xima\XimaTypo3Toolbox\Utility\ApplicationContextUtility->getContextColor
+  }
+
+  lib.technicalContext = FLUIDTEMPLATE
+  lib.technicalContext {
+    file = EXT:xima_typo3_toolbox/Resources/Private/Templates/TechnicalContext.html
+    variables {
+      context < lib.applicationContextTitle
+      color < lib.applicationContextColor
+    }
+  }
+
+  page.1722340758 =< lib.technicalContext
+[GLOBAL]

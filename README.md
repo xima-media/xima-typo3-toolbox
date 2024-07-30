@@ -24,7 +24,13 @@ composer require xima/xima-typo3-toolbox
 
 # Configuration
 
-See `ext_localconf.php` for configuration options.
+Include the static TypoScript template "TYPO3 Toolbox" or directly import it in your sitepackage:
+
+``` typoscript
+@import 'EXT:xima_typo3_toolbox/Configuration/TypoScript/setup.typoscript'
+```
+
+See `ext_localconf.php` for additional configuration options.
 
 # Features
 
