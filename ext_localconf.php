@@ -19,19 +19,22 @@ $GLOBALS['TYPO3_CONF_VARS']['EXTENSIONS'][Configuration::EXT_KEY]['contextColors
 $GLOBALS['TYPO3_CONF_VARS']['BE']['toolbarItems'][1719406254] = ProjectStatusItem::class;
 
 // Technical Context
-$GLOBALS['TYPO3_CONF_VARS']['EXTENSIONS'][Configuration::EXT_KEY]['technicalContext']['disable'] = false;
+$GLOBALS['TYPO3_CONF_VARS']['EXTENSIONS'][Configuration::EXT_KEY]['technicalContext']['enable'] = false;
 $GLOBALS['TYPO3_CONF_VARS']['EXTENSIONS'][Configuration::EXT_KEY]['technicalContext']['hideForContexts'] = [
     'Production',
     'Production/Standby',
 ];
 
 // System Information Toolbar Entry
-$GLOBALS['TYPO3_CONF_VARS']['EXTENSIONS'][Configuration::EXT_KEY]['systemInformationToolbar']['disable'] = false;
+$GLOBALS['TYPO3_CONF_VARS']['EXTENSIONS'][Configuration::EXT_KEY]['systemInformationToolbar']['enable'] = true;
 $GLOBALS['TYPO3_CONF_VARS']['EXTENSIONS'][Configuration::EXT_KEY]['systemInformationToolbar']['fileToCheck'] = 'index.php';
 
 // Toolbar Item
-$GLOBALS['TYPO3_CONF_VARS']['EXTENSIONS'][Configuration::EXT_KEY]['toolbarItem']['disable'] = false;
+$GLOBALS['TYPO3_CONF_VARS']['EXTENSIONS'][Configuration::EXT_KEY]['toolbarItem']['enable'] = true;
 
 // Application Context Endpoint
 $GLOBALS['TYPO3_CONF_VARS'][Configuration::EXT_KEY]['applicationContextEndpoint']['eID'] = 1719931549;
 $GLOBALS['TYPO3_CONF_VARS']['FE']['eID_include'][$GLOBALS['TYPO3_CONF_VARS'][Configuration::EXT_KEY]['applicationContextEndpoint']['eID']] = ContextController::class . '::getContextAction';
+
+// Frontend Editing
+$GLOBALS['TYPO3_CONF_VARS']['EXTENSIONS'][Configuration::EXT_KEY]['frontendEditing']['enable'] = false;

@@ -13,7 +13,7 @@ class LastDeploymentEventListener
 {
     public function __invoke(SystemInformationToolbarCollectorEvent $systemInformation): void
     {
-        if ($GLOBALS['TYPO3_CONF_VARS']['EXTENSIONS'][Configuration::EXT_KEY]['systemInformationToolbar']['disable']) {
+        if (!$GLOBALS['TYPO3_CONF_VARS']['EXTENSIONS'][Configuration::EXT_KEY]['systemInformationToolbar']['enable']) {
             return;
         }
         $path = GeneralUtility::getFileAbsFileName($GLOBALS['TYPO3_CONF_VARS']['EXTENSIONS'][Configuration::EXT_KEY]['systemInformationToolbar']['fileToCheck']);

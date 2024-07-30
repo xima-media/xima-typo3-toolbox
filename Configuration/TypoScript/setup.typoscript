@@ -20,3 +20,12 @@
 
   page.1722340758 =< lib.technicalContext
 [GLOBAL]
+
+[enableFrontendEditing()]
+  page.includeCSS {
+    customFrontendEditing = EXT:xima_typo3_toolbox/Resources/Public/Css/FrontendEditing.css
+  }
+  page.includeJSFooter {
+    customFrontendEditing = EXT:xima_typo3_toolbox/Resources/Public/JavaScript/frontend_editing.js
+  }
+[GLOBAL]

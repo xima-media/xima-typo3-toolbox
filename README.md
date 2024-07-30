@@ -15,6 +15,7 @@ Features:
 - Frontend hint for technical context information
 - Last updated information within system information toolbar
 - Application context endpoint
+- Frontend editing link within content elements for editors
 
 # Installation
 
@@ -41,3 +42,6 @@ The backend toolbar will show the current project version and application contex
 The frontend hint will show the current technical context information within dedicated contexts.
 
 ![Frontend](./Documentation/Images/frontend.png)
+
+The "frontend editing" shows links (for logged-in users) in the frontend to easily edit content elements.
+![Frontend Editing](./Documentation/Images/frontendEditing.png)

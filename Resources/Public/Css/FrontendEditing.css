@@ -1,0 +1,71 @@
+.xima-typo3-toolbox--edit-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    color: #333;
+    border-radius: 15px;
+    border: 1px solid #CCC;
+    cursor: pointer;
+    z-index: 1000;
+    opacity: 0.5;
+    line-height: 10px;
+    padding: 0;
+}
+
+.xima-typo3-toolbox--edit-button:hover {
+    opacity: 1;
+    box-shadow: 0 0 1px 1px rgba(0, 0, 0, .1);
+}
+
+.xima-typo3-toolbox--edit-container {
+    position: relative;
+}
+
+.xima-typo3-toolbox--dropdown-menu {
+    position: absolute;
+    display: none;
+    top: 40px;
+    right: 10px;
+    padding: .5em;
+    margin: 0;
+    min-width: 120px;
+    background: white;
+    border: 0 none;
+    border-radius: .75rem;
+    box-shadow: 0 0 1px 1px rgba(0, 0, 0, .1);
+    z-index: 1000;
+}
+
+.xima-typo3-toolbox--dropdown-menu a {
+    display: block;
+    padding: 10px;
+    color: #333;
+    text-decoration: none;
+    text-align: left;
+    white-space: nowrap;
+    margin: 0;
+    background: transparent;
+    border-radius: .375rem;
+    font-size: 14px;
+    line-height: 14px;
+    font-weight: normal;
+}
+
+.xima-typo3-toolbox--dropdown-menu a:hover {
+    background-color: #f0f0f0;
+}
+
+*[id*="c"]:hover {
+    outline: 1px dashed gray;
+}
+
+*[id*="c"] .xima-typo3-toolbox--edit-button {
+    visibility: hidden;
+}
+
+*[id*="c"]:hover .xima-typo3-toolbox--edit-button {
+    visibility: visible;
+}
