@@ -25,7 +25,7 @@ class TechnicalContextConditionFunctionsProvider implements ExpressionFunctionPr
             static fn () => null,
             static function () {
                 return $GLOBALS['TYPO3_CONF_VARS']['EXTENSIONS'][Configuration::EXT_KEY]['technicalContext']['enable'] &&
-                    in_array(Environment::getContext()->__toString(), $GLOBALS['TYPO3_CONF_VARS']['EXTENSIONS'][Configuration::EXT_KEY]['technicalContext']['hideForContexts']);
+                    !in_array(Environment::getContext()->__toString(), $GLOBALS['TYPO3_CONF_VARS']['EXTENSIONS'][Configuration::EXT_KEY]['technicalContext']['hideForContexts']);
             }
         );
     }
