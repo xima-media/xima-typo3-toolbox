@@ -6,6 +6,15 @@
 			<trans-unit id="usages.toolbar-label">
 				<source>Last Update</source>
 			</trans-unit>
+			<trans-unit id="frontend-editing.label.menu">
+				<source>Edit menu</source>
+			</trans-unit>
+			<trans-unit id="frontend-editing.label.edit-content-element">
+				<source>Edit content element</source>
+			</trans-unit>
+			<trans-unit id="frontend-editing.label.edit-page">
+				<source>Edit page</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>

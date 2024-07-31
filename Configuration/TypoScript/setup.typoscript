@@ -25,7 +25,14 @@
   page.includeCSS {
     customFrontendEditing = EXT:xima_typo3_toolbox/Resources/Public/Css/FrontendEditing.css
   }
-  page.includeJSFooter {
+  page.includeJS {
     customFrontendEditing = EXT:xima_typo3_toolbox/Resources/Public/JavaScript/frontend_editing.js
+  }
+  page.inlineLanguageLabelFiles {
+    customFrontendEditing = EXT:xima_typo3_toolbox/Resources/Private/Language/locallang.xlf
+  }
+  page.jsInline {
+      1722340759 = TEXT
+      1722340759.stdWrap.dataWrap = const pid = {TSFE:id};
   }
 [GLOBAL]

@@ -35,23 +35,8 @@ final class EditController
     public function editPage(ServerRequestInterface $request): ResponseInterface
     {
         $routing = $request->getAttribute('routing');
-        $id = $routing['identifier'];
+        $pid = $routing['identifier'];
         $returnUrl = urldecode($request->getQueryParams()['returnUrl']);
-
-        $queryBuilder = GeneralUtility::makeInstance(\TYPO3\CMS\Core\Database\ConnectionPool::class)->getQueryBuilderForTable('tt_content');
-        $contentElement = $queryBuilder
-            ->select('*')
-            ->from('tt_content')
-            ->where(
-                $queryBuilder->expr()->eq('uid', $queryBuilder->createNamedParameter($id, \TYPO3\CMS\Core\Database\Connection::PARAM_INT))
-            )
-            ->executeQuery()->fetchAssociative();
-
-        if (!$contentElement) {
-            return new RedirectResponse($returnUrl);
-        }
-
-        $pid = (int)$contentElement['pid'];
 
         $uriBuilder = GeneralUtility::makeInstance(UriBuilder::class);
         $uri = $uriBuilder->buildUriFromRoute(
