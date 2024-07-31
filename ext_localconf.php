@@ -4,6 +4,8 @@ use Xima\XimaTypo3Toolbox\Backend\ToolbarItems\ProjectStatusItem;
 use Xima\XimaTypo3Toolbox\Configuration;
 use Xima\XimaTypo3Toolbox\Controller\ContextController;
 
+$GLOBALS['TYPO3_CONF_VARS']['SYS']['fluid']['namespaces']['xt3'] = ['Xima\\XimaTypo3Toolbox\\ViewHelpers'];
+
 // Generell
 $GLOBALS['TYPO3_CONF_VARS']['EXTENSIONS'][Configuration::EXT_KEY]['contextColors'] = [
     'Production' => 'transparent',

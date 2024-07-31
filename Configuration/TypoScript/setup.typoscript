@@ -36,3 +36,13 @@
       1722340759.stdWrap.dataWrap = const pid = {TSFE:id};
   }
 [GLOBAL]
+
+lib.contentElement {
+  templateRootPaths.1722340760 = EXT:xima_typo3_toolbox/Resources/Private/Templates/
+}
+tt_content {
+  ximatypo3toolbox_technicalheadline =< lib.contentElement
+  ximatypo3toolbox_technicalheadline {
+    templateName = TechnicalHeadline
+  }
+}

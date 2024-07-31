@@ -1,0 +1,23 @@
+<html
+    xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+    data-namespace-typo3-fluid="true"
+>
+
+<f:asset.css identifier="ximatypo3toolbox_technicalheadline_css" href="EXT:xima_typo3_toolbox/Resources/Public/Css/TechnicalHeadline.css" />
+<f:asset.script identifier="ximatypo3toolbox_technicalheadline_script" src="EXT:xima_typo3_toolbox/Resources/Public/JavaScript/technical_headline.js" />
+
+<div class="technical-headline" id="{data.header -> xt3:formatSlug()}">
+    <h2 class="technical-headline__headline">
+        <a class="technical-headline__link" href="#{data.header -> xt3:formatSlug()}">#<span class="visually-hidden">{f:translate(key: 'technical_headline.headline.link.title', extensionName: 'XimaTypo3Toolbox')}</span></a>
+        <span class="technical-headline__title">{data.header}</span>
+        <a class="technical-headline__to-top" href="#technical-headline-toc" aria-label="{f:translate(key: 'technical_headline.headline.top.title', extensionName: 'XimaTypo3Toolbox')}">
+            &uarr;
+        </a>
+    </h2>
+    <f:if condition="{data.subheader}">
+        <h3 class="technical-headline__label">{data.subheader}</h3>
+    </f:if>
+    <f:if condition="{data.bodytext}">
+        <p class="technical-headline__text">{data.bodytext -> f:format.raw()}</p>
+    </f:if>
+</div>

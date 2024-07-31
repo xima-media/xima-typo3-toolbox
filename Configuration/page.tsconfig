@@ -1,0 +1,16 @@
+mod.wizards.newContentElement.wizardItems {
+  // add the content element to the tab "common"
+  common {
+    elements {
+      ximatypo3toolbox_technicalheadline {
+        iconIdentifier = content-info
+        title = LLL:EXT:xima_typo3_toolbox/Resources/Private/Language/locallang.xlf:contentelement.technical_headline.label
+        description = LLL:EXT:xima_typo3_toolbox/Resources/Private/Language/locallang.xlf:contentelement.technical_headline.description
+        tt_content_defValues {
+          CType = ximatypo3toolbox_technicalheadline
+        }
+      }
+    }
+    show := addToList(ximatypo3toolbox_technicalheadline)
+  }
+}

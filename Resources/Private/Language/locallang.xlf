@@ -15,6 +15,18 @@
 			<trans-unit id="frontend-editing.label.edit-page">
 				<source>Edit page</source>
 			</trans-unit>
+			<trans-unit id="contentelement.technical_headline.label">
+				<source>Technical headline</source>
+			</trans-unit>
+			<trans-unit id="contentelement.technical_headline.description">
+				<source>Helper content to display technical information as headline element</source>
+			</trans-unit>
+			<trans-unit id="technical_headline.headline.link.title">
+				<source>Link to itself</source>
+			</trans-unit>
+			<trans-unit id="technical_headline.headline.top.title">
+				<source>To top</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>

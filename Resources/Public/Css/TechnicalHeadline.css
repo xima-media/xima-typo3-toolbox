@@ -1,0 +1,92 @@
+.technical-headline {
+    margin: 2rem 0 1rem;
+    padding: 2rem;
+    background-color: #f6f4f0;
+    font-family: monospace, sans-serif;
+    word-break: break-all;
+    scroll-margin: 3.25rem;
+}
+.technical-headline__headline {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    font-size: 1.75rem;
+}
+.technical-headline__link {
+    color: #646464;
+    text-decoration: none;
+}
+.technical-headline__link:hover {
+    color: #000000;
+}
+.technical-headline__title {
+    flex-grow: 1;
+}
+.technical-headline__label {
+    color: #646464;
+    font-size: 1.25rem;
+}
+.technical-headline__to-top {
+    width: 2.5rem;
+    height: 2.5rem;
+    padding: 0;
+    border-radius: 50%;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    text-decoration: none;
+    position: relative;
+    display: inline-flex;
+    flex: 0 0 auto;
+    gap: .5rem;
+    justify-content: center;
+    align-items: center;
+    border: 0;
+    background-color: rgba(0, 0, 0, 0);
+    color: black;
+    cursor: pointer;
+}
+.technical-headline__to-top:hover {
+    background-color: rgba(0, 0, 0, 0);
+    color: black;
+    box-shadow: inset 0 0 0 .125rem #646464;
+}
+.technical-headline-toc {
+    margin-bottom: 1rem;
+    padding: 2rem;
+    background-color: #f6f4f0;
+    font-family: monospace, sans-serif;
+    line-break: anywhere;
+    scroll-margin: 3.25rem;
+}
+.technical-headline-toc__items {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    margin: 2rem 0 1rem;
+}
+.technical-headline-toc__item {
+    list-style: none;
+}
+.technical-headline-toc__item::before {
+    content: '# ';
+    color: #646464;
+}
+.technical-headline-toc__link {
+    display: inline-flex;
+    min-width: 10rem;
+    padding: 0.25rem 0;
+    text-decoration-style: dotted;
+    text-decoration-color: #646464;
+}
+.visually-hidden {
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important;
+    white-space: nowrap !important;
+    border: 0 !important;
+    position: absolute !important;
+}

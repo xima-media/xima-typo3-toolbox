@@ -16,6 +16,7 @@ __Features__:
 - Last updated information within system information toolbar
 - Application context endpoint
 - Frontend editing link within content elements for editors
+- Technical headline content element for e.g. styleguides or technical documentation
 
 ## Installation
 
@@ -67,3 +68,7 @@ The *application context endpoint* is available at `index.php?eID=1719931549`.
 The *"frontend editing"* shows links (for logged-in users) in the frontend to easily edit content elements.
 
 ![Frontend Editing](./Documentation/Images/frontendEditing.png)
+
+The *technical headline* is a content element to structure e.g. your styleguide or content element overview (not for production frontend usage). It automatically generates a table of contents based on the headlines.
+
+![Technical Headline](./Documentation/Images/technicalHeadline.png)
