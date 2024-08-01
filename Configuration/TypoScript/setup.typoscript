@@ -11,7 +11,7 @@
 
   lib.technicalContext = FLUIDTEMPLATE
   lib.technicalContext {
-    file = EXT:xima_typo3_toolbox/Resources/Private/Templates/TechnicalContext.html
+    file = EXT:xima_typo3_toolbox/Resources/Private/Templates/TechnicalContextHint.html
     variables {
       context < lib.applicationContextTitle
       color < lib.applicationContextColor
