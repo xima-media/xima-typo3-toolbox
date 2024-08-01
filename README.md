@@ -17,6 +17,7 @@ __Features__:
 - Application context endpoint
 - Frontend editing link within content elements for editors
 - Technical headline content element for e.g. styleguides or technical documentation
+- Various collection of TYPO3 ViewHelpers
 
 ## Installation
 
@@ -42,20 +43,27 @@ $GLOBALS['TYPO3_CONF_VARS']['EXTENSIONS']['xima_typo3_toolbox']['frontendEditing
 
 ## Features
 
+### Backend toolbar
+
 The *backend toolbar* will show the current project version and application context.
 
 ![Toolbar](./Documentation/Images/toolbar.png)
+
+### Frontend hint
 
 The *frontend hint* will show the current technical context information within dedicated contexts.
 
 ![Frontend](./Documentation/Images/frontend.png)
 
+### Last updated information
+
 You can find the *last update* information within the system information toolbar.
 
 ![Last updated](./Documentation/Images/lastUpdate.png)
 
+### Application context endpoint
 
-The *application context endpoint* is available at `index.php?eID=1719931549`.
+The *application context endpoint*, e.g. for production/standby environments, is available at `index.php?eID=1719931549`.
 
 > Hint: change the eID key in `ext_localconf.php` if needed.
 
@@ -65,10 +73,28 @@ The *application context endpoint* is available at `index.php?eID=1719931549`.
 ]
 ```
 
+### Frontend editing
+
 The *"frontend editing"* shows links (for logged-in users) in the frontend to easily edit content elements.
 
 ![Frontend Editing](./Documentation/Images/frontendEditing.png)
 
+The logic behind is very simple. A javascript is injected into the frontend, which consider all dom elements with a c-id, e.g. "c908", because it assumes that this will be a TYPO3 content element with the corresponding uid. The script will then generate a link to the TYPO3 backend with the according edit view.
+
+> Hint: The script is only injected if the feature toggle is enabled and the current backend user is logged in.
+
+
+### Technical headline
+
 The *technical headline* is a content element to structure e.g. your styleguide or content element overview (not for production frontend usage). It automatically generates a table of contents based on the headlines.
 
 ![Technical Headline](./Documentation/Images/technicalHeadline.png)
+
+### ViewHelpers
+
+See the [ViewHelpers documentation](./Documentation/ViewHelpers/CLASSES.md) for a complete list of available ViewHelpers.
+
+## License
+
+This project is licensed
+under [GNU General Public License 2.0 (or later)](LICENSE.md).

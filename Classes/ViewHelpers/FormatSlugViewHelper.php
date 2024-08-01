@@ -7,13 +7,14 @@ use TYPO3Fluid\Fluid\Core\ViewHelper\AbstractViewHelper;
 use TYPO3Fluid\Fluid\Core\ViewHelper\Traits\CompileWithContentArgumentAndRenderStatic;
 
 /**
- * Format Slug ViewHelper
- *
- * This ViewHelper format a string to a slug.
+ * This ViewHelper formats a string to a readable url slug.
  *
  * Usages:
- * ::
- *     <xt3:formatSlug>XYZ</xt3:formatSlug>
+ * ```html
+ * <xt3:formatSlug>XYZ</xt3:formatSlug>
+ *
+ * {value -> xt3:formatSlug()}
+ * ```
  */
 class FormatSlugViewHelper extends AbstractViewHelper
 {
@@ -23,6 +24,13 @@ class FormatSlugViewHelper extends AbstractViewHelper
         $this->registerArgument('value', 'string', 'String to format');
     }
 
+    /**
+     * Test
+     * @param array $arguments
+     * @param \Closure $renderChildrenClosure
+     * @param \TYPO3Fluid\Fluid\Core\Rendering\RenderingContextInterface $renderingContext
+     * @return string
+     */
     public static function renderStatic(array $arguments, \Closure $renderChildrenClosure, RenderingContextInterface $renderingContext): string
     {
         $value = $renderChildrenClosure();
