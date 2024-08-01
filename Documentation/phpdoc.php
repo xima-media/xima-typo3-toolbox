@@ -19,7 +19,8 @@
  * @param string $file Path to the file
  * @return string Content of the file
  */
-function readFileContent($file) {
+function readFileContent($file)
+{
     return file_get_contents($file);
 }
 
@@ -29,9 +30,10 @@ function readFileContent($file) {
  * @param string $content Content of the PHP file
  * @return array Extracted documentation comments
  */
-function extractDocComments($content) {
+function extractDocComments($content)
+{
     $docComments = [
-        'classes' => []
+        'classes' => [],
     ];
 
     // Regex for class documentation
@@ -39,7 +41,7 @@ function extractDocComments($content) {
     foreach ($classMatches as $match) {
         $docComments['classes'][] = [
             'name' => $match[2],
-            'comment' => cleanDocComment($match[1])
+            'comment' => cleanDocComment($match[1]),
         ];
     }
 
@@ -52,7 +54,8 @@ function extractDocComments($content) {
  * @param string $comment The comment to clean
  * @return string The cleaned comment
  */
-function cleanDocComment($comment) {
+function cleanDocComment($comment)
+{
     $comment = preg_replace('/^[ \t]*\*[ \t]?/m', '', $comment);
     return trim($comment);
 }
@@ -65,7 +68,8 @@ function cleanDocComment($comment) {
  * @param string $outputDir Path to the output directory
  * @return string Name of the generated markdown file
  */
-function generateMarkdown($className, $docComments, $outputDir) {
+function generateMarkdown($className, $docComments, $outputDir)
+{
     $markdown = "# $className\n\n";
 
     foreach ($docComments['classes'] as $class) {
@@ -89,7 +93,8 @@ function generateMarkdown($className, $docComments, $outputDir) {
  * @param string $outputDir Path to the output directory
  * @param string $tocFileName Name of the table of contents file
  */
-function processDirectory($directory, $outputDir, $tocFileName) {
+function processDirectory($directory, $outputDir, $tocFileName)
+{
     $iterator = new RecursiveIteratorIterator(new RecursiveDirectoryIterator($directory));
     $generatedFiles = [];
 
@@ -116,7 +121,8 @@ function processDirectory($directory, $outputDir, $tocFileName) {
  * @param string $outputDir Path to the output directory
  * @param string $tocFileName Name of the table of contents file
  */
-function generateTableOfContents($generatedFiles, $outputDir, $tocFileName) {
+function generateTableOfContents($generatedFiles, $outputDir, $tocFileName)
+{
     $toc = "# Table of Contents\n\n";
     foreach ($generatedFiles as $file) {
         $className = basename($file, '.md');
@@ -127,7 +133,7 @@ function generateTableOfContents($generatedFiles, $outputDir, $tocFileName) {
 }
 
 // Parse command line arguments
-$options = getopt("d:o:t::");
+$options = getopt('d:o:t::');
 if (!isset($options['d'])) {
     die("Usage: php script.php -d <directory> -o <output directory> [-t <TOC_FILENAME>]\n");
 }
@@ -150,5 +156,3 @@ if (!is_dir("$outputDir/Classes") || !is_writable("$outputDir/Classes")) {
 
 // Process the directory
 processDirectory($directory, $outputDir, $tocFileName);
-
-?>

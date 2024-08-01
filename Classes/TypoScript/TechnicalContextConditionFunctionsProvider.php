@@ -7,7 +7,6 @@ namespace Xima\XimaTypo3Toolbox\TypoScript;
 use Symfony\Component\ExpressionLanguage\ExpressionFunction;
 use Symfony\Component\ExpressionLanguage\ExpressionFunctionProviderInterface;
 use TYPO3\CMS\Core\Core\Environment;
-use TYPO3\CMS\Extbase\Utility\DebuggerUtility;
 use Xima\XimaTypo3Toolbox\Configuration;
 
 class TechnicalContextConditionFunctionsProvider implements ExpressionFunctionProviderInterface
