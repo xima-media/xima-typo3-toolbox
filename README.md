@@ -94,6 +94,14 @@ The *technical headline* is a content element to structure e.g. your styleguide 
 
 See the [ViewHelpers documentation](./Documentation/ViewHelpers/CLASSES.md) for a complete list of available ViewHelpers.
 
+## Development
+
+Use the following composer script to update the ViewHelper documentation:
+
+``` bash
+composer doc:viewhelpers
+```
+
 ## License
 
 This project is licensed
