@@ -6,14 +6,32 @@
 			<trans-unit id="usages.toolbar-label">
 				<source>Last Update</source>
 			</trans-unit>
-			<trans-unit id="frontend-editing.label.menu">
+			<trans-unit id="editMenu">
 				<source>Edit menu</source>
 			</trans-unit>
-			<trans-unit id="frontend-editing.label.edit-content-element">
+			<trans-unit id="editContentElement">
 				<source>Edit content element</source>
 			</trans-unit>
-			<trans-unit id="frontend-editing.label.edit-page">
+			<trans-unit id="editPlugin">
+				<source>Edit plugin</source>
+			</trans-unit>
+			<trans-unit id="editPage">
 				<source>Edit page</source>
+			</trans-unit>
+			<trans-unit id="history">
+				<source>History</source>
+			</trans-unit>
+			<trans-unit id="info">
+				<source>Info</source>
+			</trans-unit>
+			<trans-unit id="hide">
+				<source>Hide</source>
+			</trans-unit>
+			<trans-unit id="divEdit">
+				<source>Edit</source>
+			</trans-unit>
+			<trans-unit id="divAction">
+				<source>Action</source>
 			</trans-unit>
 			<trans-unit id="contentelement.technical_headline.label">
 				<source>Technical headline</source>
