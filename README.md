@@ -17,6 +17,7 @@ __Features__:
 - Application context endpoint
 - Frontend editing link within content elements for editors
 - Technical headline content element for e.g. styleguides or technical documentation
+- Integration of axe accessibility testing engine
 - Various collection of TYPO3 ViewHelpers
 
 ## Installation
@@ -89,6 +90,12 @@ The logic behind is very simple. A javascript is injected into the frontend, whi
 The *technical headline* is a content element to structure e.g. your styleguide or content element overview (not for production frontend usage). It automatically generates a table of contents based on the headlines.
 
 ![Technical Headline](./Documentation/Images/technicalHeadline.png)
+
+### Axe
+
+[Axe](https://www.deque.com/axe/) is an accessibility testing engine for websites. It will be automatically (regarding the configured application context) integrated into the TYPO3 frontend and display accessibility issues of your website within the browser console.
+
+![Axe](./Documentation/Images/axe.png)
 
 ### ViewHelpers
 

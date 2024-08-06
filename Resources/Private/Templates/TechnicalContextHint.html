@@ -39,6 +39,7 @@
 <div
     class="technical-context"
     data-context="{context}"
+    aria-hidden="true"
     style="background-color:{color};"
     title="This is part of the feature branch deployment and shows the actual site name of the website. This hint will not be displayed in production context."
 >
@@ -46,7 +47,8 @@
     <button
         type="button"
         class="technical-context__close"
+        tabindex="-1"
         onclick="this.parentElement.remove()"
-        aria-label="Schließe Context"
+        aria-label="Close context hint"
     ></button>
 </div>

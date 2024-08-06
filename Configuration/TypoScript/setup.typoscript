@@ -34,6 +34,18 @@
   }
 [GLOBAL]
 
+[enableAxeAccessibility()]
+  page.includeJS {
+    axeAccessibility = EXT:xima_typo3_toolbox/Resources/Public/JavaScript/lib/axe.min.js
+  }
+  page.jsInline {
+    1722945503 = TEXT
+    1722945503.value (
+      window.onload = function () { axe.run().then(results => { if (results.violations.length) { console.warn('[XIMA TYPO3 Toolbox] Axe accessibility warnings:', results.violations); } }).catch(err => { console.error('Something bad happened:', err.message); });}
+    )
+  }
+[GLOBAL]
+
 lib.contentElement {
   templateRootPaths.1722340760 = EXT:xima_typo3_toolbox/Resources/Private/Templates/
 }
