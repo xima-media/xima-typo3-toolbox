@@ -28,7 +28,7 @@ class ProjectStatusItem implements ToolbarItemInterface
      */
     public function getItem(): string
     {
-        if ($GLOBALS['TYPO3_CONF_VARS']['EXTENSIONS'][Configuration::EXT_KEY]['toolbarItem']['enable']) {
+        if (!$GLOBALS['TYPO3_CONF_VARS']['EXTENSIONS'][Configuration::EXT_KEY]['toolbarItem']['enable']) {
             return '';
         }
 
