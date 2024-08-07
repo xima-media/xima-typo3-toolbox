@@ -42,7 +42,7 @@ $GLOBALS['TYPO3_CONF_VARS']['FE']['eID_include'][$GLOBALS['TYPO3_CONF_VARS'][Con
 $GLOBALS['TYPO3_CONF_VARS']['EXTENSIONS'][Configuration::EXT_KEY]['frontendEditing']['enable'] = false;
 
 // Axe Accessibility
-$GLOBALS['TYPO3_CONF_VARS']['EXTENSIONS'][Configuration::EXT_KEY]['axeAccessibility']['enable'] = true;
+$GLOBALS['TYPO3_CONF_VARS']['EXTENSIONS'][Configuration::EXT_KEY]['axeAccessibility']['enable'] = false;
 $GLOBALS['TYPO3_CONF_VARS']['EXTENSIONS'][Configuration::EXT_KEY]['axeAccessibility']['enableForContexts'] = [
     'Testing/Stage',
     'Testing',
