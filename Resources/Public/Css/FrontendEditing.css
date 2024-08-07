@@ -1,7 +1,10 @@
+.xima-typo3-toolbox--edit-container {
+    outline: 1px dashed gray;
+}
+
 .xima-typo3-toolbox--edit-button {
     position: absolute;
-    top: 10px;
-    right: 10px;
+    display: none;
     width: 30px;
     height: 30px;
     background-color: white;
@@ -24,31 +27,28 @@
     box-shadow: 0 0 1px 1px rgba(0, 0, 0, .1);
 }
 
-.xima-typo3-toolbox--edit-container {
-    position: relative;
-}
-
-.xima-typo3-toolbox--edit-container:hover {
-    outline: 1px dashed gray;
-}
 .xima-typo3-toolbox--dropdown-menu {
     position: absolute;
     display: none;
-    top: 40px;
-    right: 10px;
-    padding: .5em;
     margin: 0;
     min-width: 120px;
+    z-index: 1000;
+    direction: ltr;
+    background: transparent;
+}
+
+.xima-typo3-toolbox--dropdown-menu-inner {
+    margin: 10px;
     background: white;
     border: 0 none;
     border-radius: .75rem;
     box-shadow: 0 0 1px 1px rgba(0, 0, 0, .1);
-    z-index: 1000;
-    direction: ltr;
+    padding: .5em;
 }
 
-.xima-typo3-toolbox--dropdown-menu a, .xima-typo3-toolbox--dropdown-menu div {
+.xima-typo3-toolbox--dropdown-menu-inner a, .xima-typo3-toolbox--dropdown-menu-inner div {
     display: flex;
+    align-items: flex-start;
     gap: 5px;
     padding: 10px;
     color: #333;
@@ -63,11 +63,16 @@
     font-weight: normal;
 }
 
-.xima-typo3-toolbox--dropdown-menu div {
+.xima-typo3-toolbox--dropdown-menu-inner div {
     border-radius: 0;
 }
 
-.xima-typo3-toolbox--dropdown-menu div.xima-typo3-toolbox--divider {
+.xima-typo3-toolbox--dropdown-menu-inner p {
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+
+.xima-typo3-toolbox--dropdown-menu-inner div.xima-typo3-toolbox--divider {
     color: #666;
     text-transform: uppercase;
     font-size: 10px;
@@ -75,11 +80,11 @@
     padding: 5px;
 }
 
-.xima-typo3-toolbox--dropdown-menu a svg, .xima-typo3-toolbox--dropdown-menu div svg {
+.xima-typo3-toolbox--dropdown-menu-inner a svg, .xima-typo3-toolbox--dropdown-menu-inner div svg {
     width: 16px;
 }
 
-.xima-typo3-toolbox--dropdown-menu a:hover {
+.xima-typo3-toolbox--dropdown-menu-inner a:hover {
     background-color: #f0f0f0;
 }
 

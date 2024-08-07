@@ -4,49 +4,64 @@
 		<header/>
 		<body>
 			<trans-unit id="usages.toolbar-label">
-				<source>Last Update</source>
+				<source />
+				<target>Letzte Aktualisierung</target>
 			</trans-unit>
 			<trans-unit id="edit_menu">
-				<source>Edit menu</source>
+				<source />
+				<target>Bearbeitungsmenü</target>
 			</trans-unit>
 			<trans-unit id="edit_content_element">
-				<source>Edit content element</source>
+				<source />
+				<target>Inhaltselement bearbeiten</target>
 			</trans-unit>
 			<trans-unit id="edit_plugin">
-				<source>Edit plugin</source>
+				<source />
+				<target>Plugin bearbeiten</target>
 			</trans-unit>
 			<trans-unit id="edit_pages">
-				<source>Edit page</source>
+				<source />
+				<target>Seite bearbeiten</target>
 			</trans-unit>
 			<trans-unit id="history">
-				<source>History</source>
+				<source />
+				<target>Verlauf</target>
 			</trans-unit>
 			<trans-unit id="info">
-				<source>Info</source>
+				<source />
+				<target>Info</target>
 			</trans-unit>
 			<trans-unit id="hide">
-				<source>Hide</source>
+				<source />
+				<target>Deaktivieren</target>
 			</trans-unit>
 			<trans-unit id="div_info">
-				<source>Info</source>
+				<source />
+				<target>Info</target>
 			</trans-unit>
 			<trans-unit id="div_edit">
-				<source>Edit</source>
+				<source />
+				<target>Bearbeiten</target>
 			</trans-unit>
 			<trans-unit id="div_action">
-				<source>Action</source>
+				<source />
+				<target>Aktionen</target>
 			</trans-unit>
 			<trans-unit id="contentelement.technical_headline.label">
-				<source>Technical headline</source>
+				<source />
+				<target>Technische Überschrift</target>
 			</trans-unit>
 			<trans-unit id="contentelement.technical_headline.description">
-				<source>Helper content to display technical information as headline element</source>
+				<source />
+				<target>Hilfsinhalt um technische Informationen als Headline Element auszuspielen</target>
 			</trans-unit>
 			<trans-unit id="technical_headline.headline.link.title">
-				<source>Link to itself</source>
+				<source />
+				<target>Link auf sich selbst</target>
 			</trans-unit>
 			<trans-unit id="technical_headline.headline.top.title">
-				<source>To top</source>
+				<source />
+				<target>Nach oben</target>
 			</trans-unit>
 		</body>
 	</file>

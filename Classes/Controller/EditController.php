@@ -71,21 +71,25 @@ final class EditController
             $result[$contentElement['uid']] = [
                 'uid' => $contentElement['uid'],
                 'type' => $contentElement['CType'],
-                'label' => $GLOBALS['LANG']->sL('LLL:EXT:xima_typo3_toolbox/Resources/Private/Language/locallang.xlf:editMenu'),
+                'label' => $GLOBALS['LANG']->sL('LLL:EXT:xima_typo3_toolbox/Resources/Private/Language/locallang.xlf:edit_menu'),
                 'icon' => $iconFactory->getIcon('actions-open', 'small')->getAlternativeMarkup('inline'),
                 'actions' => [
+                    'div_info' => [
+                        'type' => 'divider',
+                        'label' => $GLOBALS['LANG']->sL('LLL:EXT:xima_typo3_toolbox/Resources/Private/Language/locallang.xlf:div_info'),
+                    ],
                     'intro' => [
                         'type' => 'header',
-                        'label' => $GLOBALS['LANG']->sL($contentElementConfig['label']),
+                        'label' => $GLOBALS['LANG']->sL($contentElementConfig['label']) . '<p><small><strong>[' . $contentElement['uid'] . ']</strong> ' . ($contentElement['header'] ? (strlen($contentElement['header']) > 30 ? substr($contentElement['header'],0,30).'...' : $contentElement['header']) : '') . '</small></p>',
                         'icon' => $iconFactory->getIcon($contentElementConfig['icon'], 'small')->getAlternativeMarkup('inline'),
                     ],
                     'div_edit' => [
                         'type' => 'divider',
-                        'label' => $GLOBALS['LANG']->sL('LLL:EXT:xima_typo3_toolbox/Resources/Private/Language/locallang.xlf:divEdit'),
+                        'label' => $GLOBALS['LANG']->sL('LLL:EXT:xima_typo3_toolbox/Resources/Private/Language/locallang.xlf:div_edit'),
                     ],
                     'edit' => [
                         'type' => 'link',
-                        'label' => $contentElement['CType'] === 'list' ? $GLOBALS['LANG']->sL('LLL:EXT:xima_typo3_toolbox/Resources/Private/Language/locallang.xlf:editPlugin') : $GLOBALS['LANG']->sL('LLL:EXT:xima_typo3_toolbox/Resources/Private/Language/locallang.xlf:editContentElement'),
+                        'label' => $contentElement['CType'] === 'list' ? $GLOBALS['LANG']->sL('LLL:EXT:xima_typo3_toolbox/Resources/Private/Language/locallang.xlf:edit_plugin') : $GLOBALS['LANG']->sL('LLL:EXT:xima_typo3_toolbox/Resources/Private/Language/locallang.xlf:edit_content_element'),
                         'icon' => $iconFactory->getIcon($contentElement['CType'] === 'list' ? 'content-plugin' : 'content-textpic', 'small')->getAlternativeMarkup('inline'),
                         'url' => GeneralUtility::makeInstance(UriBuilder::class)->buildUriFromRoute(
                             'record_edit',
@@ -101,7 +105,7 @@ final class EditController
                     ],
                     'page' => [
                         'type' => 'link',
-                        'label' => $GLOBALS['LANG']->sL('LLL:EXT:xima_typo3_toolbox/Resources/Private/Language/locallang.xlf:editPage'),
+                        'label' => $GLOBALS['LANG']->sL('LLL:EXT:xima_typo3_toolbox/Resources/Private/Language/locallang.xlf:edit_pages'),
                         'icon' => $iconFactory->getIcon('apps-pagetree-page-default', 'small')->getAlternativeMarkup('inline'),
                         'url' => GeneralUtility::makeInstance(UriBuilder::class)->buildUriFromRoute(
                             'web_layout',
@@ -113,7 +117,7 @@ final class EditController
                     ],
                     'div_action' => [
                         'type' => 'divider',
-                        'label' => $GLOBALS['LANG']->sL('LLL:EXT:xima_typo3_toolbox/Resources/Private/Language/locallang.xlf:divAction'),
+                        'label' => $GLOBALS['LANG']->sL('LLL:EXT:xima_typo3_toolbox/Resources/Private/Language/locallang.xlf:div_action'),
                     ],
                     'hide' => [
                         'type' => 'link',
