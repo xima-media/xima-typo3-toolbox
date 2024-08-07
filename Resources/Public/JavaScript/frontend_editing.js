@@ -1,7 +1,10 @@
 document.addEventListener('DOMContentLoaded', function() {
   const getContentElements = async () => {
+    if (!pid) return;
+
     const url = encodeURIComponent(window.location.href);
-    const endpoint = `/typo3/editable-content-elements?pid=${pid}&returnUrl=${url}`;
+    const base = baseUrl ?? ''
+    const endpoint = `${base}/typo3/editable-content-elements?pid=${pid}&returnUrl=${url}`.replace(/([^:]\/)\/+/g, "$1");
 
     try {
       const response = await fetch(endpoint, { cache: 'no-cache' });

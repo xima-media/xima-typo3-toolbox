@@ -30,7 +30,10 @@
   }
   page.jsInline {
       1722340759 = TEXT
-      1722340759.stdWrap.dataWrap = const pid = {TSFE:id};
+      1722340759.stdWrap.dataWrap (
+        const pid = {TSFE:id};
+        const baseUrl = '{site:base}';
+      )
   }
 [GLOBAL]
 
