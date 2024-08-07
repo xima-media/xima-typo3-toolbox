@@ -80,7 +80,7 @@ final class EditController
                     ],
                     'intro' => [
                         'type' => 'header',
-                        'label' => $GLOBALS['LANG']->sL($contentElementConfig['label']) . '<p><small><strong>[' . $contentElement['uid'] . ']</strong> ' . ($contentElement['header'] ? (strlen($contentElement['header']) > 30 ? substr($contentElement['header'],0,30).'...' : $contentElement['header']) : '') . '</small></p>',
+                        'label' => $GLOBALS['LANG']->sL($contentElementConfig['label']) . '<p><small><strong>[' . $contentElement['uid'] . ']</strong> ' . ($contentElement['header'] ? (strlen($contentElement['header']) > 30 ? substr($contentElement['header'], 0, 30) . '...' : $contentElement['header']) : '') . '</small></p>',
                         'icon' => $iconFactory->getIcon($contentElementConfig['icon'], 'small')->getAlternativeMarkup('inline'),
                     ],
                     'div_edit' => [
