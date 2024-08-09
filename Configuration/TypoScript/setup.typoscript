@@ -21,22 +21,6 @@
   page.1722340758 =< lib.technicalContext
 [GLOBAL]
 
-[enableFrontendEditing()]
-  page.includeCSS {
-    customFrontendEditing = EXT:xima_typo3_toolbox/Resources/Public/Css/FrontendEditing.css
-  }
-  page.includeJS {
-    customFrontendEditing = EXT:xima_typo3_toolbox/Resources/Public/JavaScript/frontend_editing.js
-  }
-  page.jsInline {
-      1722340759 = TEXT
-      1722340759.stdWrap.dataWrap (
-        const pid = {TSFE:id};
-        const baseUrl = '{site:base}';
-      )
-  }
-[GLOBAL]
-
 [enableAxeAccessibility()]
   page.includeJS {
     axeAccessibility = EXT:xima_typo3_toolbox/Resources/Public/JavaScript/lib/axe.min.js

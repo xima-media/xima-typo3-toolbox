@@ -15,7 +15,6 @@ __Features__:
 - Frontend hint for technical context information
 - Last updated information within system information toolbar
 - Application context endpoint
-- Frontend editing link within content elements for editors
 - Technical headline content element for e.g. styleguides or technical documentation
 - Integration of axe accessibility testing engine
 - Various collection of TYPO3 ViewHelpers
@@ -73,17 +72,6 @@ The *application context endpoint*, e.g. for production/standby environments, is
   "Development"
 ]
 ```
-
-### Frontend editing
-
-The *"frontend editing"* shows links (for logged-in users) in the frontend to easily edit content elements.
-
-![Frontend Editing](./Documentation/Images/frontendEditing.png)
-
-The logic behind is very simple. A javascript is injected into the frontend, which consider all dom elements with a c-id, e.g. "c908", because it assumes that this will be a TYPO3 content element with the corresponding uid. The script will then generate a link to the TYPO3 backend with the according edit view.
-
-> Hint: The script is only injected if the feature toggle is enabled and the current backend user is logged in.
-
 
 ### Technical headline
 
