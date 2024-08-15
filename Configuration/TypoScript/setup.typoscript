@@ -9,12 +9,18 @@
     userFunc = Xima\XimaTypo3Toolbox\Utility\ApplicationContextUtility->getContextColor
   }
 
+  lib.websiteTitle = USER
+  lib.websiteTitle {
+    userFunc = Xima\XimaTypo3Toolbox\Utility\ApplicationContextUtility->getWebsiteTitle
+  }
+
   lib.technicalContext = FLUIDTEMPLATE
   lib.technicalContext {
     file = EXT:xima_typo3_toolbox/Resources/Private/Templates/TechnicalContextHint.html
     variables {
       context < lib.applicationContextTitle
       color < lib.applicationContextColor
+      title < lib.websiteTitle
     }
   }
 
