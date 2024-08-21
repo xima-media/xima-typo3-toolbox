@@ -38,9 +38,6 @@ $GLOBALS['TYPO3_CONF_VARS']['EXTENSIONS'][Configuration::EXT_KEY]['toolbarItem']
 $GLOBALS['TYPO3_CONF_VARS'][Configuration::EXT_KEY]['applicationContextEndpoint']['eID'] = 1719931549;
 $GLOBALS['TYPO3_CONF_VARS']['FE']['eID_include'][$GLOBALS['TYPO3_CONF_VARS'][Configuration::EXT_KEY]['applicationContextEndpoint']['eID']] = ContextController::class . '::getContextAction';
 
-// Frontend Editing
-$GLOBALS['TYPO3_CONF_VARS']['EXTENSIONS'][Configuration::EXT_KEY]['frontendEditing']['enable'] = false;
-
 // Axe Accessibility
 $GLOBALS['TYPO3_CONF_VARS']['EXTENSIONS'][Configuration::EXT_KEY]['axeAccessibility']['enable'] = false;
 $GLOBALS['TYPO3_CONF_VARS']['EXTENSIONS'][Configuration::EXT_KEY]['axeAccessibility']['enableForContexts'] = [

@@ -35,10 +35,10 @@ Include the static TypoScript template "TYPO3 Toolbox" or directly import it in 
 
 See `ext_localconf.php` for additional configuration options.
 
-E.g. enabling the feature toggle for frontend editing:
+E.g. disabling the toolbar-item feature:
 
 ``` php
-$GLOBALS['TYPO3_CONF_VARS']['EXTENSIONS']['xima_typo3_toolbox']['frontendEditing']['enable'] = true;
+$GLOBALS['TYPO3_CONF_VARS']['EXTENSIONS'][Configuration::EXT_KEY]['toolbarItem']['enable'] = false;
 ```
 
 ## Features
