@@ -10,9 +10,7 @@ $GLOBALS['TYPO3_CONF_VARS']['SYS']['fluid']['namespaces']['xt3'] = ['Xima\\XimaT
 $GLOBALS['TYPO3_CONF_VARS']['EXTENSIONS'][Configuration::EXT_KEY]['contextColors'] = [
     'Production' => 'transparent',
     'Production/Standby' => '#2f9c91',
-    'Staging' => '#f39c12',
-    'Testing' => '#f39c12',
-    'Testing/Stage' => '#f39c12',
+    'Production/Staging' => '#f39c12',
     'Development' => '#bd593a',
     'Development/DDEV' => '#bd593a',
 ];
@@ -41,9 +39,7 @@ $GLOBALS['TYPO3_CONF_VARS']['FE']['eID_include'][$GLOBALS['TYPO3_CONF_VARS'][Con
 // Axe Accessibility
 $GLOBALS['TYPO3_CONF_VARS']['EXTENSIONS'][Configuration::EXT_KEY]['axeAccessibility']['enable'] = false;
 $GLOBALS['TYPO3_CONF_VARS']['EXTENSIONS'][Configuration::EXT_KEY]['axeAccessibility']['enableForContexts'] = [
-    'Testing/Stage',
-    'Testing',
-    'Staging',
+    'Production/Staging',
     'Development/DDEV',
     'Development',
 ];
