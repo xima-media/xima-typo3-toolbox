@@ -26,6 +26,6 @@ class ApplicationContextUtility
         $pid = $GLOBALS['TSFE']->id;
         $siteFinder = GeneralUtility::makeInstance(SiteFinder::class);
         $site = $siteFinder->getSiteByPageId($pid);
-        return (string)$site->getConfiguration()['websiteTitle'];
+        return $site->getConfiguration()['websiteTitle'] ?: $site->getIdentifier();
     }
 }
