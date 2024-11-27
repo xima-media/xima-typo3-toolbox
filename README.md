@@ -79,6 +79,83 @@ The *technical headline* is a content element to structure e.g. your styleguide 
 
 ![Technical Headline](./Documentation/Images/technicalHeadline.png)
 
+### Dashboard widget
+
+#### Overview
+
+The extension comes with a prepared overview dashboard widget as a starting point for editors. Simply configure this widget in your `Services.yaml` to your needs. Example configuration below:
+
+```yaml
+services:
+    Xima\XimaTypo3Toolbox\Widgets\Overview:
+    class: 'Xima\XimaTypo3Toolbox\Widgets\Overview'
+    arguments:
+        $options:
+            description: '<p>Willkommen im Backend der Webseite. Das <a href="https://typo3.org/cms" target="_blank">TYPO3</a> CMS ist ein quelloffenes Business-Level Content Management System, welches weltweit für
+                Webseiten aller Arten verwendet wird.</p><p>Hier finden Sie hilfreiche Informationen und Links, die Ihnen den Einstieg als Redakteur:in erleichtern.</p>'
+            logo:
+                path: 'EXT:xima_typo3_toolbox/Resources/Public/Icons/Extension.svg'
+                alt: 'Default logo'
+                width: 100
+            cards:
+                - title: 'Max Mustermann'
+                  subtitle: 'Ansprechpartner'
+                  description: 'Für schnelle Hilfe und Problemlösungen im Haus steht Ihnen ihr Kollege zur Verfügung.'
+                  icon: 'install-reset-user'
+                  links:
+                      - url: 'tel:+4935123456789'
+                        label: 'Telefon'
+                        icon: 'actions-phone'
+                      - url: 'mailto:todo@de.de'
+                        label: 'E-Mail'
+                        icon: 'actions-envelope'
+                - title: 'Handbuch'
+                  subtitle: 'Dokumentation'
+                  description: 'In der Dokumentation finden Sie hilfreiche Erläuterungen zum Anlegen und Bearbeiten des Inhalts.'
+                  icon: 'install-documentation'
+                  links:
+                      - module: 'help_manual'
+                        target: '_blank'
+                        label: 'Handbuch'
+                        icon: 'actions-search'
+                      - url: 'https://docs.typo3.org/m/typo3/tutorial-getting-started/main/en-us/Index.html'
+                        target: '_blank'
+                        label: 'Erste Schritte'
+                        icon: 'actions-brand-typo3'
+        tags:
+            -   name: dashboard.widget
+                identifier: 'toolboxOverview'
+                groupNames: 'general'
+                title: 'LLL:EXT:xima_typo3_toolbox/Resources/Private/Language/locallang_be.xlf:widgets.overview.title'
+                description: 'LLL:EXT:xima_typo3_toolbox/Resources/Private/Language/locallang_be.xlf:widgets.overview.description'
+                iconIdentifier: 'content-widget-overview'
+                height: 'medium'
+                width: 'medium'
+```
+
+Add the widget to your dashboard in the TYPO3 backend.
+
+![Widget Selection](./Documentation/Images/widget-selection.png)
+![Widget](./Documentation/Images/widget.png)
+
+> Hint: Optionally add a default dashboard preset to show the overview widget to all editors.
+
+Provide a configuration for the default dashboard preset in your `Configuration/Backend/DashboardPresets.php`:
+```php
+<?php
+
+return [
+    'default' => [
+        'title' => 'LLL:EXT:your_extension/Resources/Private/Language/locallang.xlf:dashboard.default',
+        'description' => 'LLL:EXT:your_extension/Resources/Private/Language/locallang.xlf:dashboard.default.description',
+        'iconIdentifier' => 'content-dashboard',
+        'defaultWidgets' => ['toolboxOverview', 't3information'],
+        'showInWizard' => false,
+    ],
+];
+
+```
+
 ### Axe
 
 [Axe](https://www.deque.com/axe/) is an accessibility testing engine for websites. It will be automatically (regarding the configured application context) integrated into the TYPO3 frontend and display accessibility issues of your website within the browser console.

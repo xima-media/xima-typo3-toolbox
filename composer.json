@@ -1,58 +1,61 @@
 {
-  "name": "xima/xima-typo3-toolbox",
-  "description": "This extension provides several tools for TYPO3 integrators and developers.",
-  "type": "typo3-cms-extension",
-  "license": [
-    "GPL-2.0-or-later"
-  ],
-  "authors": [
-    {
-      "name": "Konrad Michalik",
-      "email": "konrad.michalik@xima.de",
-      "role": "Developer"
-    }
-  ],
-  "require": {
-    "php": "^8.1",
-    "ext-dom": "*",
-    "ext-intl": "*",
-    "ext-libxml": "*",
-    "ext-simplexml": "*",
-    "typo3/cms-core": "^12.0 || ^13.0",
-  	"typo3/cms-fluid": "^12.0 || ^13.0",
-    "typo3/cms-frontend": "^12.0 || ^13.0",
-  	"typo3/cms-backend": "^12.0 || ^13.0"
-  },
-  "require-dev": {
-    "friendsofphp/php-cs-fixer": "^3.52",
-    "roave/security-advisories": "dev-latest",
-    "saschaegerer/phpstan-typo3": "^1.10",
-    "symfony/translation": "^6.3 || ^7.0"
-  },
-  "autoload": {
-    "psr-4": {
-      "Xima\\XimaTypo3Toolbox\\": "Classes/"
-    }
-  },
-  "extra": {
-    "typo3/cms": {
-      "extension-key": "xima_typo3_toolbox"
-    }
-  },
-  "config": {
-    "sort-packages": true,
-    "allow-plugins": {
-      "typo3/cms-composer-installers": true,
-      "typo3/class-alias-loader": true,
-      "php-http/discovery": true,
-      "helhum/dotenv-connector": true
-    }
-  },
-  "scripts": {
-    "php:lint": "find *.php . -name '*.php' ! -path './vendor/*'  ! -path './var/*' ! -path '*node_modules/*' -print0 | xargs -0 -n 1 -P 4 php -l",
-    "php:fixer": "php vendor/bin/php-cs-fixer --config=php-cs-fixer.php fix",
-    "php:stan": "php vendor/bin/phpstan --generate-baseline=phpstan-baseline.neon --allow-empty-baseline",
-    "xml:lint": "find . -name '*.xlf' ! -path './vendor/*' ! -path './var/*' | xargs -r xmllint --schema vendor/symfony/translation/Resources/schemas/xliff-core-1.2-transitional.xsd --noout",
-	"doc:viewhelpers": "php Documentation/phpdoc.php -d Classes/ViewHelpers -o Documentation/ViewHelpers"
-  }
+	"name": "xima/xima-typo3-toolbox",
+	"description": "This extension provides several tools for TYPO3 integrators and developers.",
+	"type": "typo3-cms-extension",
+	"license": [
+		"GPL-2.0-or-later"
+	],
+	"authors": [
+		{
+			"name": "Konrad Michalik",
+			"email": "konrad.michalik@xima.de",
+			"role": "Developer"
+		}
+	],
+	"require": {
+		"php": "^8.1",
+		"ext-dom": "*",
+		"ext-intl": "*",
+		"ext-libxml": "*",
+		"ext-simplexml": "*",
+		"typo3/cms-core": "^12.0 || ^13.0",
+		"typo3/cms-fluid": "^12.0 || ^13.0",
+		"typo3/cms-frontend": "^12.0 || ^13.0",
+		"typo3/cms-backend": "^12.0 || ^13.0",
+		"typo3/cms-beuser": "^12.0 || ^13.0",
+		"typo3/cms-dashboard": "^12.0 || ^13.0"
+	},
+	"require-dev": {
+		"friendsofphp/php-cs-fixer": "^3.52",
+		"roave/security-advisories": "dev-latest",
+		"saschaegerer/phpstan-typo3": "^1.10",
+		"symfony/translation": "^6.3 || ^7.0"
+	},
+	"autoload": {
+		"psr-4": {
+			"Xima\\XimaTypo3Toolbox\\": "Classes/"
+		}
+	},
+	"extra": {
+		"typo3/cms": {
+			"extension-key": "xima_typo3_toolbox"
+		}
+	},
+	"config": {
+		"sort-packages": true,
+		"lock": false,
+		"allow-plugins": {
+			"typo3/cms-composer-installers": true,
+			"typo3/class-alias-loader": true,
+			"php-http/discovery": true,
+			"helhum/dotenv-connector": true
+		}
+	},
+	"scripts": {
+		"php:lint": "find *.php . -name '*.php' ! -path './vendor/*'  ! -path './var/*' ! -path '*node_modules/*' -print0 | xargs -0 -n 1 -P 4 php -l",
+		"php:fixer": "php vendor/bin/php-cs-fixer --config=php-cs-fixer.php fix",
+		"php:stan": "php vendor/bin/phpstan --generate-baseline=phpstan-baseline.neon --allow-empty-baseline --memory-limit=2G",
+		"xml:lint": "find . -name '*.xlf' ! -path './vendor/*' ! -path './var/*' | xargs -r xmllint --schema vendor/symfony/translation/Resources/schemas/xliff-core-1.2-transitional.xsd --noout",
+		"doc:viewhelpers": "php Documentation/phpdoc.php -d Classes/ViewHelpers -o Documentation/ViewHelpers"
+	}
 }

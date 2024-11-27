@@ -1,0 +1,58 @@
+<html xmlns:core="http://typo3.org/ns/TYPO3/CMS/Core/ViewHelpers"
+      xmlns:be="http://typo3.org/ns/TYPO3/CMS/Backend/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+
+<div class="widget-content-title">
+    {f:translate(key: options.title, default: options.title)}
+</div>
+<div class="widget-content-main">
+    <div style="display: flex; gap: 3em; min-height: 100%;">
+        <div style="display:flex; flex-direction: column; flex-grow: 1">
+            <div style="flex-grow: 1">
+                {f:translate(key: options.description, default: options.description) -> f:format.raw()}
+            </div>
+            <div class="card-container" style="margin-top: 1em">
+                <f:for each="{options.cards}" as="card">
+                    <div class="card card-size-fixed-small">
+                        <div class="card-header bg-gray">
+                            <div class="card-icon">
+                                <core:icon identifier="{card.icon}" size="medium"/>
+                            </div>
+                            <div class="card-header-body">
+                                <h3 class="card-title">{f:translate(key: card.title, default: card.title)}</h3>
+                                <span class="card-subtitle">{f:translate(key: card.subtitle, default: card.subtitle)}</span>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">{f:translate(key: card.description, default: card.description) -> f:format.raw()}</p>
+                        </div>
+                        <div class="card-footer">
+                            <f:for each="{card.links}" as="link">
+                                <f:variable name="href">
+                                    <f:if condition="{link.module}">
+                                        <f:then>
+                                            {be:moduleLink(route: link.module)}
+                                        </f:then>
+                                        <f:else>
+                                            {link.url}
+                                        </f:else>
+                                    </f:if>
+                                </f:variable>
+                                <a class="btn btn-{link.type}" href="{href}" target="{link.target}">
+                                    <f:if condition="{link.icon}">
+                                        <core:icon identifier="{link.icon}" size="small"/>
+                                    </f:if>
+                                    {f:translate(key: link.label, default: link.label)}
+                                </a>
+                            </f:for>
+                        </div>
+                    </div>
+                </f:for>
+            </div>
+        </div>
+        <div>
+            <img src="{f:uri.resource(path: options.logo.path)}" alt="{options.logo.alt}" width="{options.logo.width}"/>
+        </div>
+    </div>
+</div>
+</html>

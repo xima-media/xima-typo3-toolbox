@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+	<file source-language="en" datatype="plaintext" original="messages" date="2024-01-16T09:00:00Z">
+		<body>
+			<!-- Widgets-->
+			<trans-unit id="widgets.overview.title">
+				<source>Overview</source>
+			</trans-unit>
+			<trans-unit id="widgets.overview.description">
+				<source>This widget provides a quick intro for editors.</source>
+			</trans-unit>
+
+			<!-- Widget Content -->
+			<trans-unit id="widgets.overview.default.description">
+				<source>Welcome to the backend of the TYPO3 CMS.</source>
+			</trans-unit>
+			<trans-unit id="widgets.overview.default.greeting.morning">
+				<source>Good morning</source>
+			</trans-unit>
+			<trans-unit id="widgets.overview.default.greeting.afternoon">
+				<source>Good afternoon</source>
+			</trans-unit>
+			<trans-unit id="widgets.overview.default.greeting.evening">
+				<source>Good evening</source>
+			</trans-unit>
+			<trans-unit id="widgets.overview.default.greeting.night">
+				<source>Good night</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>
