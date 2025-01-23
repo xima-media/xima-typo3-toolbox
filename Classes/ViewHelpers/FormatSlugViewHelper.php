@@ -46,7 +46,7 @@ class FormatSlugViewHelper extends AbstractViewHelper
         return 'value';
     }
 
-    public static function generateSlug(string $string, string $fallback = null, int $maxLength = 128): string
+    public static function generateSlug(string $string, ?string $fallback = null, int $maxLength = 128): string
     {
         $string = trim(strtolower($string));
 
