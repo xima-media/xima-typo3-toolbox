@@ -30,6 +30,10 @@ class TechnicalHeadline {
   }
 
   generateTableOfContents() {
+    if (document.querySelector("#technical-headline-toc").length) {
+      return
+    }
+
     let html = `
       <div id="technical-headline-toc" class="technical-headline-toc">
         <h2 class="technical-headline-toc__headline">Table of contents</h2>
