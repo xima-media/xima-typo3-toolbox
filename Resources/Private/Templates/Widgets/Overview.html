@@ -28,16 +28,7 @@
                         </div>
                         <div class="card-footer">
                             <f:for each="{card.links}" as="link">
-                                <f:variable name="href">
-                                    <f:if condition="{link.module}">
-                                        <f:then>
-                                            {be:moduleLink(route: link.module)}
-                                        </f:then>
-                                        <f:else>
-                                            {link.url}
-                                        </f:else>
-                                    </f:if>
-                                </f:variable>
+                                <f:variable name="href"><f:spaceless><f:if condition="{link.module}"><f:then>{be:moduleLink(route: link.module)}</f:then><f:else>{link.url}</f:else></f:if></f:spaceless></f:variable>
                                 <a class="btn btn-{link.type}" href="{href}" target="{link.target}">
                                     <f:if condition="{link.icon}">
                                         <core:icon identifier="{link.icon}" size="small"/>
