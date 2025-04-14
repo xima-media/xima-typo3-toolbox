@@ -1,16 +1,16 @@
 [enableTechnicalContext()]
-  lib.applicationContextTitle = USER
-  lib.applicationContextTitle {
+  temp.applicationContextTitle = USER
+  temp.applicationContextTitle {
     userFunc = Xima\XimaTypo3Toolbox\Utility\ApplicationContextUtility->getContextTitle
   }
 
-  lib.applicationContextColor = USER
-  lib.applicationContextColor {
+  temp.applicationContextColor = USER
+  temp.applicationContextColor {
     userFunc = Xima\XimaTypo3Toolbox\Utility\ApplicationContextUtility->getContextColor
   }
 
-  lib.websiteTitle = USER
-  lib.websiteTitle {
+  temp.websiteTitle = USER
+  temp.websiteTitle {
     userFunc = Xima\XimaTypo3Toolbox\Utility\ApplicationContextUtility->getWebsiteTitle
   }
 
@@ -18,9 +18,9 @@
   lib.technicalContext {
     file = EXT:xima_typo3_toolbox/Resources/Private/Templates/TechnicalContextHint.html
     variables {
-      context < lib.applicationContextTitle
-      color < lib.applicationContextColor
-      title < lib.websiteTitle
+      context < temp.applicationContextTitle
+      color < temp.applicationContextColor
+      title < temp.websiteTitle
     }
   }
 
