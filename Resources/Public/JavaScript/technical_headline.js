@@ -30,7 +30,7 @@ class TechnicalHeadline {
   }
 
   generateTableOfContents() {
-    if (document.querySelector("#technical-headline-toc").length) {
+    if (document.querySelector("#technical-headline-toc")) {
       return
     }
 
